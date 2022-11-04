@@ -12,8 +12,9 @@ public class Person {
     public static void main(String args[]){
         Transport bus1 = new Bus();
         Transport train1 = new Train();
-        Travel travel = new Travel();
-        travel.start(bus1);
-        travel.start(train1);
+        Travel travel = new Travel(bus1);
+        travel.start();
+        Travel travel2 = new Travel(train1);
+        travel2.start();
     }
 }

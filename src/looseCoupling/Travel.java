@@ -9,8 +9,16 @@ package looseCoupling;
  * @author lenovo
  */
 public class Travel {
-    Transport transport;
-    public void start(Transport transport){
-        transport.start();
+    
+    private Transport transport ;
+//    public void start(Transport transport){
+//        transport.start();
+//    }
+    //or
+    public Travel(Transport transport){
+        this.transport = transport;
+    }
+    public void start(){
+        this.transport.start();
     }
 }
